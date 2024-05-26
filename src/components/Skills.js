@@ -7,13 +7,13 @@ const Skills = ({ skills }) => {
 
   useEffect(() => {
     if (chartInstance.current) {
-      chartInstance.current.destroy(); // Önceki grafik nesnesini yok et
+      chartInstance.current.destroy(); // Destroy the previous graphic object
     }
 
-    // Yeni grafik nesnesini oluştur
+    // Create the new graphic object
     const ctx = chartContainer.current.getContext('2d');
     chartInstance.current = new Chart(ctx, {
-      type: 'bar', // Grafik türü (ör. bar, line, pie)
+      type: 'bar', // Graphic type (e.g. bar, line, pie)
       data: {
         labels: skills.map((skill) => skill.skill),
         datasets: [{

@@ -39,6 +39,7 @@ const Dashboard = () => {
       <Courses title="Upcoming Courses" courses={data.upcoming_courses} />
       <Skills skills={data.skills_in_development} />
       <Teams teams={data.teams} />
+      
     </div>
   );
 };
